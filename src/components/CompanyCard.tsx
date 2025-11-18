@@ -1,7 +1,7 @@
 import { Company } from '@/types/company';
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from '@/components/ui/card';
 import { Badge } from '@/components/ui/badge';
-import { MapPin, Users, Calendar, ExternalLink } from 'lucide-react';
+import { MapPin, Users, Calendar } from 'lucide-react';
 import { Button } from '@/components/ui/button';
 
 interface CompanyCardProps {
@@ -43,13 +43,6 @@ export const CompanyCard = ({ company }: CompanyCardProps) => {
             <span>Founded {company.founded}</span>
           </div>
         </div>
-
-        <Button variant="outline" className="w-full group" asChild>
-          <a href={company.website} target="_blank" rel="noopener noreferrer">
-            Visit Website
-            <ExternalLink className="ml-2 h-4 w-4 transition-transform group-hover:translate-x-0.5" />
-          </a>
-        </Button>
       </CardContent>
     </Card>
   );
